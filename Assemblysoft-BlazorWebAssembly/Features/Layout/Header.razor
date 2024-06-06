@@ -1,0 +1,334 @@
+﻿
+<style type="text/css">
+    .menu-icon svg {
+        width: 1.3rem;
+    }
+</style>
+
+<!-- Header -->
+<header id="header" class="header">
+    <div class="header-inner">
+
+        <!-- Logo -->
+        <div class="logo">
+            <a asp-controller="Home" asp-action="Index">
+
+                @{
+                    @* Initial logo - darker or lighter, based on bg image*@
+                    switch (Page)
+                    {
+                        case "about":
+                            {
+                                <img class="logo-light" src="/img/logo/v1/3tg.png?v=1.2" alt="Assemblysoft" />
+                                break;
+                            }
+                        case "community":
+                        case "careers":
+                            {
+                                <img class="logo-light" src="/img/logo/v1/3.png?v=1.2" alt="Assemblysoft" />
+                                break;
+                            }
+                        case "biz":
+                            {
+                                <img class="logo-light" src="/img/logo/v1/1.png?v=1.2" alt="Assemblysoft" />
+                                break;
+                            }
+                        case "insight":
+                            {
+                                <img class="logo-light" src="/img/logo/v1/4tg.png?v=1.2" alt="Assemblysoft" />
+                                break;
+                            }
+                        case "blog":
+                        case "article":
+                            {
+                                <img class="logo-light" src="/img/logo/v1/3.png?v=1.2" alt="Assemblysoft" />
+                                break;
+                            }
+                        case "contact":
+                        case "lv":
+                            {
+                                <img class="logo-light" src="/img/logo/v1/5tg.png?v=1.2" alt="Assemblysoft" />
+                                break;
+                            }
+                        default:
+                            {
+                                <img class="logo-light" src="/img/logo/v1/1tg.png?v=1.2" alt="Assemblysoft" />
+                                break;
+                            }
+                    }
+                }
+                <img class="logo-dark" src="/img/logo/v1/1.png?v=1.2" width="174px;" alt="Assemblysoft" />
+
+            </a>
+        </div>
+        <!-- End Logo -->
+        <!-- Mobile Navbar Icon -->
+        <div class="nav-mobile nav-bar-icon">
+            <span></span>
+        </div>
+        <!-- End Mobile Navbar Icon -->
+        <!-- Navbar Navigation -->
+        @*Note:only apply to home page as the only one utilising single page nav*@
+
+
+        <div class="nav-menu @(Page=="home" ? "singlepage-nav" : "")">
+            <ul class="nav-menu-inner">
+
+
+                @{
+                    @* Menu items*@
+                    switch (Page)
+                    {
+                        case "home":
+                            {
+                                // <li>
+                                //     <a class="current" href="#intro">Home <i class="fa fa-home"></i></a>
+                                // </li>
+
+
+                                // <li>
+                                //     <a href="#what">What We Do</a>
+                                // </li>
+
+
+                                break;
+                            }
+                        default:
+                            {
+                                <li>
+                                    <a class="external" asp-controller="home" asp-action="Index">Home <i class="fa fa-home"></i></a>
+                                </li>
+
+                                break;
+                            }
+                    }
+
+                }
+
+
+
+
+                @switch (Page)
+                {
+                    case "outsource":
+                        {
+                            <li>
+                                <a class="external menu-has-sub" href="/services" title="Developing custom software solutions and line of business applications leveraging the latest .NET Frameworks and libraries, backed by Microsoft Azure, bringing 25 years of experience and Best Practice to the table.">What We Do <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="sub-dropdown dropdown" style="width:350px;">
+                                    <li><a class="external" asp-controller="Services" asp-action="customdev" title="Assemblysoft build custom .NET applications and services for business, turning ideas into working solutions, backed by our Microsoft partnership."><i class="fas fa-mobile-alt"></i>Custom Software Development&nbsp;</a></li>
+
+                                </ul>
+                            </li>
+
+                            break;
+                        }
+                    case "custom":
+                        {
+                            <li>
+                                <a class="external menu-has-sub" href="/services" title="Developing custom software solutions and line of business applications leveraging the latest .NET Frameworks and libraries, backed by Microsoft Azure, bringing 25 years of experience and Best Practice to the table.">What We Do <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="sub-dropdown dropdown" style="width:350px;">
+                                    <li><a class="external" asp-controller="Services" asp-action="SoftwareDevelopmentOutsourcing" title="Assemblysoft provide software development outsourcing to enable businesses to accelerate software development projects."><i class="far fa-lightbulb"></i>Software Development Outsourcing&nbsp;</a></li>
+
+                                </ul>
+                            </li>
+
+                            break;
+                        }
+                    default:
+                        {
+
+                            <li>
+                                <a class="external menu-has-sub" href="/services" title="Developing custom software solutions and line of business applications leveraging the latest .NET Frameworks and libraries, backed by Microsoft Azure, bringing 25 years of experience and Best Practice to the table.">What We Do <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="sub-dropdown dropdown" style="width:350px;">
+                                    <li><a class="external" asp-controller="Services" asp-action="customdev" title="Assemblysoft build custom .NET applications and services for business, turning ideas into working solutions, backed by our Microsoft partnership."><i class="fas fa-mobile-alt"></i>Custom Software Development&nbsp;</a></li>
+                                    <li><a class="external" asp-controller="Services" asp-action="SoftwareDevelopmentOutsourcing" title="Assemblysoft provide software development outsourcing to enable businesses to accelerate software development projects."><i class="far fa-lightbulb"></i>Software Development Outsourcing&nbsp;</a></li>
+                                    @* <li><a class="external" asp-controller="Services" asp-action="ComplianceAndAudit" title="ompliance standards affect the way you collect, use and store sensitive information of clients and prospects. Companies that fail to meet compliance requirements lose the capacity to expand their business to new markets and lose potential business opportunities."><i class="fas fa-lock"></i>Compliance and Audit&nbsp;</a></li> *@
+                                </ul>
+                            </li>
+                            break;
+                        }
+                }
+
+
+
+                @* <li><a class="external" href="/services/mobile-application-development" title="Assemblysoft develop .NET MAUI Blazor Hybrid cross platform mobile applications and services for business, turning a vision into a tangible solution."><i class="far fa-lightbulb"></i>Mobile Application Development&nbsp;</a></li>
+                <li><a class="external" href="/services/microsoft-azure" title="Assemblysoft design and develop Microsoft Azure solutions and services to support complex applications and data in the Microsoft Cloud."><i class="far fa-lightbulb"></i>Cloud Development&nbsp;</a></li>
+                <li><a class="external" href="/services/devops" title="Assemblysoft manage, build and develop Azure DevOps build and release pipelines to automate software delivery, from code to production, end to end."><i class="far fa-lightbulb"></i>DevOps Development&nbsp;</a></li>
+                <li><a class="external" href="/services/software-architecture" title="Assemblysoft architects can turn a complex vision into a clear and concise blueprint that all stakeholders can clearly understand and developers can hit the ground running with a clear architecture and development roadmap."><i class="far fa-lightbulb"></i>Software Architecture&nbsp;</a></li>
+                <li><a class="external" href="/services/third-party-integrations" title="Assemblysoft are well versed in integrating with third party APIs and services from payment gateways, headless CMS services, enterprise grade services, security solutions and software vendors."><i class="far fa-lightbulb"></i>Third Party Integrations&nbsp;</a></li>
+                <li><a class="external" href="/services/api-development" title="Assemblysoft developers design and create APIs on a daily basis to support frontend applications with secure, efficient data, analytics and insights."><i class="far fa-lightbulb"></i>API Development&nbsp;</a></li>
+                <li><a class="external" href="/services/legacy-transformation" title="Assemblysoft have been on the journey developing software for many years. We have seen new technologies supercede older ones but also realise the critical role legacy applications play in existing businesses today. We have the experience and balance to assist with analysis and forward planning, including lift and shift, where appropriate, for your line of business applications and services."><i class="far fa-lightbulb"></i>Legacy Migration&nbsp;</a></li>
+                <li><a class="external" href="/services/proof-of-concept-development" title="Assemblysoft are adept at mitigating risk by rapidly developing proof of concept applications and services using best practices. This provides a quick feedback loop for our clients who benefit from early proof that there idea is feasible and any underlying challenges are uncovered."><i class="far fa-lightbulb"></i>Proof Of Concept (POC) Dev&nbsp;</a></li>                         *@
+
+
+                @{
+                    @* Menu items*@
+                    switch (Page)
+                    {
+                        case "home":
+                            {
+
+                                <li>
+                                    <a href="#how">How We Do It</a>
+                                </li>
+
+
+                                break;
+                            }
+                        default:
+                            {
+
+                                break;
+                            }
+                    }
+
+                }
+
+                <li>
+                    <a class="external menu-has-sub" asp-controller="Technologies" asp-action="index" title="Specialist .NET Development and Microsoft Azure Development experience having produced production grade, business critical, applications and services for both medium and large organisations.">Development Expertise <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="sub-dropdown dropdown" style="width:300px;">
+                        <li><a class="external" asp-controller="Technologies" asp-action="dotnet" title="Assemblysoft are .NET Development experts having developed applications across the entire .NET Stack, spanning Windows, Web, Mobile and Cloud."><i class="fab fa-windows"></i>.NET&nbsp;</a></li>
+                        <li><a class="external" asp-controller="Technologies" asp-action="blazorunited" title="Assemblysoft are developing Full stack Blazor applications leveraging Blazor Server and Blazor WebAssembly to fully utilise browser and mobile capabilities to deliver web applications that are composed of clean, well architected components for sustainable development. We are applying our deep knowledge of Blazor Server and Blazor WebAssembly to produce amazing user experiences for business with re-usable components."><i class="fas fa-fire"></i>FullStack Blazor&nbsp;</a></li>
+                        <li><a class="external" asp-controller="Technologies" asp-action="blazorhybrid" title="Assemblysoft are .NET MAUI Blazor Hybrid experts, with cross platform applications being downloaded from Google, Apple and Windows Stores supporting the medical industry. We are a .NET MAUI Blazor Hybrid development company."><i class="fas fa-mobile-alt"></i>.NET MAUI Blazor Hybrid&nbsp;</a></li>
+                        <li><a class="external" asp-controller="Technologies" asp-action="azure" title="We have been designing and developing the full range of services withing the Microsoft Cloud since it's inception. We pride ourselves in keeping abreast of advancements and best practice for cloud development and security. We not only provide the best and most efficient solutions but are mindful of keeping cost to a minnimum when presenting tailored solutions for your business."><i class="fas fa-cloud"></i>Microsoft Azure&nbsp;</a></li>
+                        <li><a class="external" asp-controller="Technologies" asp-action="ado" title="We eat our own dog food when it comes to DevOps. All our own applications and services leverage all the Azure DevOps Services enabling us to pass on our experience and knowhow to our clients. We are DevOps practitioners who advocate clean, reliable and robust development and deployment practices, taking away the pain of needing to manage late night deployments and rollbacks with our Development and Operations experience, fully leveraging Azure DevOps Services."><i class="fa fa-cogs"></i>Azure DevOps Services&nbsp;</a></li>
+                        <li><a class="external" asp-controller="Technologies" asp-action="windows" title="We have been developing Windows applications and Windows Services for over 25 years. Assemblysoft are able to support and extend Windows Forms (WinForms) and Windows Presentation Foundation (WPF) applications and connect them to the Microsoft Azure services."><i class="fab fa-windows"></i>Windows Applications&nbsp;</a></li>
+                        <li><a class="external" asp-controller="Technologies" asp-action="aspnet" title="Our bread and butter has always been our capabilities surrounding ASP.NET Core, supporting all the patterns from MVC, Razor Pages, and Full stack with proficiency in CSS, Javascript and C#."><i class="fas fa-globe"></i>ASP.NET Core&nbsp;</a></li>
+
+                        <li><a class="external" asp-controller="Technologies" asp-action="blazorserver" title="Assemblysoft are Blazor Server developers with Blazor applications being used by business in production. We are a Blazor development company."><i class="fas fa-fire"></i>Blazor Server&nbsp;</a></li>
+                        <li><a class="external" asp-controller="Technologies" asp-action="blazorwasm" title="Assemblysoft have been developing Blazor WebAssembly applications since pre-release of Blazor. We know what it takes, from real world experience, to deliver a Blazor WebAssembly application that leverages all the benefits of .NET and Javascript interop."><i class="fas fa-puzzle-piece"></i>Blazor WebAssembly&nbsp;</a></li>
+
+
+
+
+                    </ul>
+                </li>
+
+                @* <li>
+                <a class="external menu-has-sub" href="/business-services" title="Helping ENTREPRENEURS and Small businesses turn ideas into working web sites">Business Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul class="sub-dropdown dropdown">
+                <li><a class="external" href="/business-services/insight/helping-entrepreneurs-turn-ideas-into-tangible-solutions" title="How Assemblysoft help Entrepreneurs Turn Ideas into working Solutions"><i class="far fa-lightbulb"></i>Helping Entrepreneurs&nbsp;</a></li>
+                <li><a class="external" href="/business-services/insight/transform-your-ideas-into-software-solutions" title="Assemblysoft provide website and software design for your business"><i class="fas fa-drafting-compass"></i>Turning Ideas into Software&nbsp;</a></li>
+                <li><a class="external" href="/business-services/insight/simple-content-management" title="Easily update your website with a CMS solution from Assemblysoft"><i class="fas fa-globe"></i>Managing your website content&nbsp;</a></li>
+                <li><a class="external" href="/business-services/insight/why-should-i-have-a-support-plan-in-place-for-my-business" title="Why a support plan from Assemblysoft can mitigate risk for your business"><i class="far fa-star"></i>Support Plans&nbsp;</a></li>
+                <li><a class="external" href="/business-services/insight/why-work-with-assemblysoft" title="The benefits of working with Assemblysoft"><i class="fas fa-globe"></i>Benefits of working with us&nbsp;</a></li>
+                </ul>
+                </li> *@
+
+                @*    <a class="external menu-has-sub" href="https://services.assemblysoft.com/" title="Helping ENTREPRENEURS and Small businesses turn ideas into working web sites">Business Services <i class="fa fa-angle-down"></i></a>
+                <ul class="sub-dropdown dropdown">
+                <li><a class="external" href="https://services.assemblysoft.com/helping-entrepreneurs-turn-ideas-into-real-solutions/" title="How Assemblysoft help Entrepreneurs Turn Ideas into working Solutions"><i class="far fa-lightbulb"></i>Helping Entrepreneurs&nbsp;</a></li>
+
+                <li><a class="external" href="https://services.assemblysoft.com/transform-your-ideas-into-software-products/" title="Assemblysoft provide website and software design for your business"><i class="fas fa-drafting-compass"></i>Turning Ideas into Software&nbsp;</a></li>
+
+                <li><a class="external" href="https://business-services.assemblysoft.com/simple-content-management/" title="Easily update your website with a CMS solution from Assemblysoft"><i class="fas fa-globe"></i>Managing your website content&nbsp;</a></li>
+
+
+                <li><a class="external" href="https://business-services.assemblysoft.com/why-should-i-have-a-support-plan-in-place-for-my-business/" title="Why a support plan from Assemblysoft can mitigate risk for your business"><i class="far fa-star"></i>Support Plans&nbsp;</a></li>
+
+                <li><a class="external" href="https://business-services.assemblysoft.com/tag/business-services/" title="More ways assemblysoft can help your business become more profitable and hassle free"><i class="fas fa-rocket"></i>Business Services&nbsp;</a></li>
+
+
+                </ul>
+                </li>*@
+
+                <li><a class="external" asp-controller="case-studies" asp-action="index">Case Studies</a></li>
+
+                <li>
+                    <a class="external menu-has-sub" asp-controller="Home" asp-action="About">Company <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="sub-dropdown dropdown" style="width:200px">
+
+                        <li><a class="external" asp-controller="Home" asp-action="About"><i class="fas fa-info"></i>&nbsp;About</a></li>
+                        @* <li><a class="external" href="https://portal.assemblysoft.com/public/form/view/64c7d2e7fb7839003aaf41fc" target="_blank"><i class="fa fa-send"></i>&nbsp;Contact</a></li> *@
+                        <li><a class="external" asp-controller="blog" asp-action="Index"><i class="fa fa-rss"></i>&nbsp;Blog</a></li>
+
+                        <li><a class="external" asp-controller="community" asp-action="Index"><i class="fas fa-users"></i>&nbsp;Community</a></li>
+                        <li><a class="external" asp-controller="careers" asp-action="Index"><i class="far fa-building"></i>&nbsp;Careers</a></li>
+
+
+
+                        @*<li><a class="external" href="https://services.assemblysoft.com/tag/blog" target="_blank"><i class="fa fa-rss"></i>&nbsp;Blog</a></li>*@
+                        @*<li><a class="external" href="https://services.assemblysoft.com/tag/blog" target="_blank"><i class="fa fa-rss"></i>&nbsp;Blog</a></li>*@
+
+
+
+
+
+                        <li><a class="external" asp-controller="contact" asp-action="index"><i class="fa fa-send"></i>&nbsp;Contact</a></li>
+                        @* <li><a class="external" href="#contact"><i class="fa fa-send"></i>&nbsp;Contact</a></li> *@
+                        @*https://localhost:5006/Blog/post/how-to-disable-continuous-integration-on-yaml-build-and-release-pipelines*@
+
+                    </ul>
+                </li>
+
+
+
+                @*<li>
+                <a class="external menu-has-sub" asp-controller="Services" asp-action="Index">Technical Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul class="sub-dropdown dropdown">
+                <li><a class="external" asp-controller="services" asp-action="website-design" title="Design and build of a website or web application">Website Build</a></li>
+                <li><a class="external" asp-controller="services" asp-action="minnimum-viable-product" title="Build a Minnimum Viable Product (MVP)">MVP</a></li>
+                <li><a class="external" asp-controller="services" asp-action="software-prototype" title="Build a prototype, proof of concept or Minnimum viable product">Protoyping</a></li>
+                <li><a class="external" asp-controller="services" asp-action="custom-software-development" title="Build a custom software solution or protoype">Bespoke Software Development</a></li>
+                <li><a class="external" asp-controller="services" asp-action="software-support" title="Extend, Enhance and Support an existing software application or suite of applications">Support existing software Applications</a></li>
+                <li><a class="external" asp-controller="services" asp-action="email-management" title="Manage your team with group inboxes and email accounts">Mail Services</a></li>
+                <li><a class="external" asp-controller="services" asp-action="search-engine-optimisation" title="Achieve a higher ranking for your business website">Search Engine Optimisation</a></li>
+                <li><a class="external" asp-controller="services" asp-action="cloud-migration" title="Move your website, applications and data securely to the cloud">Cloud Migration</a></li>
+                <li><a class="external" asp-controller="services" asp-action="content-management" title="Manage your web content with a Content Management System (CMS)">CMS Solutions</a></li>
+                <li><a class="external" asp-controller="services" asp-action="website-performance" title="Speed up your website to increase user retention and google speed index score">Website Performance</a></li>
+
+                <li><a class="external" asp-controller="services" asp-action="index" title="The technical services we offer at Assemblysoft">All Technical Services</a></li>
+                </ul>
+                </li>*@
+
+
+                @*<li>
+                <a class="external menu-has-sub">R&D Projects <i class="fa fa-angle-down"></i></a>
+                <ul class="sub-dropdown dropdown">
+                <li><a class="external" asp-controller="Projects" asp-action="O2Preserve">02 Preserve<i class="fa fa-tint" aria-hidden="true"></i></a></li>
+                <li><a class="external" asp-controller="Projects" asp-action="DevOps">DevOps Task Runner <i class="fa fa-cogs" aria-hidden="true"></i></a></li>
+                <li><a class="external" asp-controller="Projects" asp-action="TagFlare">Tag Flare <i class="fa fa-tag"></i></a></li>
+                </ul>
+                </li>*@
+
+                @*<li>
+
+
+                </li>*@
+
+                <li>
+
+                    @* <a class="external" href="mailto:hello@assemblysoft.com"><i class="fa fa-envelope"></i>&nbsp;hello@assemblysoft.com</a>       *@
+                    @* <a class="btn-Action btn-white-outline btn-lg scroll-down" href="https://portal.assemblysoft.com/public/form/view/64c7d2e7fb7839003aaf41fc" target="_blank"><i class="fa fa-send"></i>&nbsp;Contact Us</a> *@
+                    @* <a class="btn-Action btn-white-outline btn-lg scroll-down external" ><i class="fa fa-send"></i>&nbsp;Contact Us</a> *@
+                    @* <a class="external" asp-controller="contact" asp-action="index"><i class="fa fa-send"></i>&nbsp;Contact Us</a> *@
+
+                    <a href="#contact"><i class="fa fa-send"></i>&nbsp;Contact Us</a>
+
+
+                </li>
+
+
+
+                @*<li>*@
+
+                @*<a href="tel:01202428719" class="external"><i class="fa fa-phone-square"></i>&nbsp;01202 428719</a>*@
+                @*</li>*@
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- End Navbar Navigation -->
+
+    </div>
+</header>
+<!-- End Header -->
+
+@code
+{
+    [Parameter]
+    public string Page { get; set; } = "home";
+}
