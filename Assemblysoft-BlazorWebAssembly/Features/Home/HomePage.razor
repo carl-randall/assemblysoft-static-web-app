@@ -1,0 +1,154 @@
+﻿@page "/"
+
+<PageTitle>Home Page</PageTitle>
+ 
+<style>
+
+    /* Hide the element by default */
+    .hero-toggle {
+        display: none;
+    }
+
+    .mob-only-toggle {
+        display: none;
+    }
+
+    /* Use a media query to show the element on screens wider than 600px */
+    @@media (min-width: 601px) {
+        .hero-toggle {
+            display: block; /* or 'flex', 'inline-block', etc., depending on your layout */
+        }
+
+        .hero h2.alt-title {
+            font-size: 27px;
+            margin-top: 50px;
+        }
+
+        .hero .intro-content-inner {
+        }
+    }
+
+    @@media (max-width: 600px) {
+
+        .mob-only-toggle {
+            display: block;
+        }
+
+        .hero .intro-content-inner {
+            margin-top: 40px;
+        }
+
+        .hero h2.alt-title {
+            margin-top: 80px;
+        }
+
+
+        .hero h3 {
+            font-size: 18px;
+        }
+
+        h3.custom {
+            color: dimgray;
+            font-size: 15px;
+        }
+
+
+        .hero h5 {
+            /* padding-bottom: 20px; */
+        }
+    }
+
+    .text-orange {
+        color: orange;
+    }
+
+    .text-primary {
+        color: deepskyblue;
+    }
+
+</style>
+
+<Header></Header>
+ 
+@*Intro*@
+<section id="intro" class="intro black-bg hero">
+    <div class="bg-image bg-midnight overlay-dark40 dark-bg parallax parallax-section">
+        <div class="js-halfscreen-height container">
+            <div class="intro-content">
+                <div class="intro-content-inner">
+
+                    <h2 class="alt-title intro-sub-title secondary-color">We Build <a asp-controller="services" asp-action="customdev">Custom software</a><span class="hero-toggle"> solutions enabling you to <span class="color-theme">accelerate growth</span></span></h2>
+                    <h3><a class="color-theme" asp-controller="technologies" asp-action="blazorunited"><i class="fas fa-globe"></i>&nbsp;Web</a> | <a style="color:deepskyblue;" asp-controller="technologies" asp-action="blazorhybrid"><i class="fas fa-mobile-alt"></i>&nbsp;Mobile</a> | <a style="color:deepskyblue;" asp-controller="technologies" asp-action="azure"><i class="fas fa-cloud"></i>&nbsp;Cloud</a></h3>
+                    <h5 class="alt-title intro-sub-title mb-0">Applications Engineered to your Business</h5>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="service" class="section-padding">
+    <div class="container text-center">
+
+        <h1 class="mb-60 page-title intro-title"><span class="underline">Build Custom Software</span> <strong>from scratch or modernise existing</strong> solutions with a leading Software Development Company</h1>
+        <h3 class="custom alt-title mb-0 text-center">Based in the United Kingdom</h3>
+        <a href="#start" class="btn btn-lg btn-black mt-25">Tell us what you need.</a>
+    </div>
+</section>
+
+@*video testimonial*@
+<section class="section-padding bg-image dark-bg pos-section overlay-dark" data-stellar-background-ratio="0.4">
+    <div class="page-triangle white-bg"></div>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">WHAT IS IT LIKE TO WORK WITH <span class="text-primary">ASSEMBLYSOFT?</span></h2>
+            <h2 class="text-center page-title intro-title">CUSTOMER CASE STUDY</h2>
+            <div class="col-md-5 mb-sm-45">
+                <h2 class="alt-title"><span class="text-primary">Custom software</span> expertly designed and built by <span class="text-orange">Microsoft Certified Developers</span></h2>
+
+                <div class="item">
+                    <div class="testimonial text-center max-width-700">
+                        <div class="page-icon-sm"><i class="fas fa-quote-right" style="color:deepskyblue;"></i></div>
+                        <p class="lead-lg">
+                            Assemblysoft have consistently proven themselves as trustworthy, responsive partners.
+                        </p>
+                        <a target="_blank" href="https://g.page/assemblysoft">
+                            <span class="fa fa-star fa-sm checked"></span>
+                            <span class="fa fa-star fa-sm checked"></span>
+                            <span class="fa fa-star fa-sm checked"></span>
+                            <span class="fa fa-star fa-sm checked"></span>
+                            <span class="fa fa-star fa-sm checked"></span>
+                        </a>
+                        <h6 class="quote-author alt-title">David Roome <span class="text-regular mob-only-toggle">( COO - Synapser )</span><span class="text-regular hero-toggle">( Chief Operations Officer - Synapser )</span></h6>
+                    </div>
+                </div>
+
+                <p class="lead-lg">Team up with a <span style="color:deepskyblue;">software partner</span> who pride themselves on <span style="color:deepskyblue;">sustainable development</span> best practice.</p>
+                <div class="mt-30">
+                </div>
+            </div>
+            <div class="col-md-7 text-right wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+
+                <div class="embed-responsive embed-responsive-16by9 player">
+                    <iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/Xe1clIGNCVA" title="This video highlights what it was like to work with Assemblysoft to design and build a number of Blazor applications for the medical and pharmaceutical industries. It takes the form of a testimonial from the COO of Synapser who describes why Synapser reached out to Assemblysoft and what the experience was like migrating a Flash application to a Blazor Server application and also the experience of developing a greenfield .NET MAUI Blazor Hybrid application with Assemblysoft to manage a patient care record" allowfullscreen></iframe>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 text-left pt-10">
+                        <p class="lead"><a class="link features-block-link" asp-controller="CaseStudies" asp-action="vitalme" title="Learn more about our work developing a Patient Care Record Management System" target="_more"><span style="color:whitesmoke;">READ FULL CASE STUDY &nbsp;<i class="fas fa-book-reader"></i></span></a></p>
+                        <p class="lead"><a class="link features-block-link" asp-controller="CaseStudies" asp-action="Index"><span style="color:whitesmoke;">MORE CASE STUDIES &nbsp;<i class="fas fa-book-open"></i></span></a></p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <a asp-controller="CaseStudies" asp-action="vitalme" title="Learn more about our work developing a Patient Care Record Management System" target="_more"><img loading="lazy" class="lazyload" src="~/img/case-studies/vitalme/vitalme01.png" data-src="/img/case-studies/vitalme/vitalme01.png" alt="vitalme-patient-care-record-management-system" asp-append-version="true" style="max-width:250px;" /></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
