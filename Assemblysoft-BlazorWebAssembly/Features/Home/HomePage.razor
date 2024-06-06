@@ -6,6 +6,19 @@
  
 @code
 {
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("Component initialized");
+        //Task.Delay(4000);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        //await Task.Delay(4000);
+        Console.WriteLine("Component async initialized");
+        
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if(firstRender)
@@ -13,6 +26,10 @@
             Console.WriteLine("Component rendered completely");
 
             await JSRuntime.InvokeVoidAsync("InitPage", "component rendered!");
+
+            //await Task.Delay(4000);
+            await JSRuntime.InvokeVoidAsync("remove_loader", "remove spinner");
+            
         }
     }
 }

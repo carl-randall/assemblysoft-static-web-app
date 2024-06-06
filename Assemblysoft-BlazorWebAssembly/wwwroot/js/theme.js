@@ -9,23 +9,16 @@ window.alerts = {
 };
 
 
-function init_blz(value) {
+function remove_loader(value) {
 
     console.log(value);
 
-    //$.blz(value);
-
-    //xinit_scroll();
-    //xint_introHeight();
-    //xstickHeader();
-    //xint_nav_menu_height();
-    //int_SliderPluguns();
-    //xinit_wow_animation();
-    //int_isotopPortfolio();
-    //int_lightbox();
-    //int_Elements();
+    // Site Preloader
+    $('#preloader').fadeOut('slow', function () {
+        //$(this).remove();
+        $(this).hide();
+    });    
 };
-
 
 
 function InitPage(value) {
@@ -44,11 +37,14 @@ function InitPage(value) {
             init_wow_animation();
             int_isotopPortfolio();
             int_lightbox();
-            int_Elements();
+            int_Elements();          
         });
 
 
         $(window).load(function () {
+
+            console.log('window.load');
+
             int_isotopPortfolio();
 
             // Site Preloader
