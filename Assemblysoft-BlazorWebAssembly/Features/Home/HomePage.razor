@@ -1,7 +1,22 @@
 ﻿@page "/"
+@inject IJSRuntime JSRuntime
+
 
 <PageTitle>Home Page</PageTitle>
  
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+        {
+            Console.WriteLine("Component rendered completely");
+
+            await JSRuntime.InvokeVoidAsync("InitPage", "component rendered!");
+        }
+    }
+}
+
 <style>
 
     /* Hide the element by default */
