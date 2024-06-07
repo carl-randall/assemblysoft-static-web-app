@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
         element.addEventListener('mouseenter', function () {
             const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
             // if (vw > 991) {
-                console.log("ENTER");
-                console.log(this);
+            console.log("ENTER");
+            console.log(this);
             var tagertTabEl = document.querySelector(this.dataset.target);
             var active = document.querySelector('.steps-tabs .show.active');
 

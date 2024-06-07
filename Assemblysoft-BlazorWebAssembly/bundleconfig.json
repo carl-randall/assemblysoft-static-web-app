@@ -1,0 +1,164 @@
+// Configure bundling and minification for the project.
+// More info at https://go.microsoft.com/fwlink/?LinkId=808241
+[
+  {
+    "outputFileName": "wwwroot/template/intro.min.html",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/static/intro.html"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/template/counter.min.html",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/static/counter.html"
+    ]
+  },
+  //****** Coming Soon ********
+  {
+    "outputFileName": "wwwroot/css/bs.min.css",
+    "inputFiles": [
+      //"wwwroot/css/bootstrap.css"
+      "wwwroot/css/red-bootstrap.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      //"wwwroot/css/typed.css",
+      "wwwroot/css/plugins/owl.carousel.css",
+      "wwwroot/css/style.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/render.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/css/render.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/plugins.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/css/plugins/animate.css"
+    ]
+  },
+
+  {
+    "outputFileName": "wwwroot/js/s.min.js",
+    "inputFiles": [
+      "wwwroot/js/jquery-1.11.3.min.js",
+      "wwwroot/js/plugins/jquery.easing.js",
+      "wwwroot/js/plugins/SmoothScroll.js",
+      "wwwroot/js/plugins/wow.min.js",
+      "wwwroot/js/plugins/isotope.pkgd.min.js",
+      "wwwroot/js/plugins/jquery.stellar.min.js",
+      "wwwroot/js/plugins/jquery.fitvids.js",
+      "wwwroot/js/plugins/jquery.magnific-popup.min.js",
+      "wwwroot/js/plugins/jquery.appear.js",
+      "wwwroot/js/plugins/jquery.countTo.js",
+      "wwwroot/js/plugins/jquery.mb.YTPlayer.min.js",
+      "wwwroot/js/plugins/jquery.simple-text-rotator.min.js",
+      "wwwroot/js/plugins/jquery.backstretch.js",
+      "wwwroot/js/plugins/jquery.singlePageNav.min.js",
+      "wwwroot/js/plugins/jquery.validate.min.js",
+      "wwwroot/js/theme.js",
+      "wwwroot/js/plugins/jquery.downCount.js"
+    ]
+  },
+
+  //***** End Coming Soon *******
+
+
+
+
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+
+      "wwwroot/js/theme.js"
+      //"wwwroot/js/map.js"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/type.min.js",
+    "inputFiles": [
+      "wwwroot/js/typed.js",
+      "wwwroot/js/typeinit.js"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/jq.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.min.js",
+      "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/plugins.min.js",
+    "inputFiles": [
+      "wwwroot/js/typed.js",
+      "wwwroot/js/plugins/jquery.easing.js",
+      "wwwroot/js/plugins/SmoothScroll.js",
+      "wwwroot/js/plugins/owl.carousel.min.js",
+      "wwwroot/js/plugins/wow.min.js",
+      "wwwroot/js/plugins/isotope.pkgd.min.js",
+      "wwwroot/js/plugins/jquery.stellar.min.js",
+      "wwwroot/js/plugins/jquery.fitvids.js",
+      "wwwroot/js/plugins/jquery.magnific-popup.min.js",
+      "wwwroot/js/plugins/jquery.appear.js",
+      "wwwroot/js/plugins/jquery.countTo.js",
+      "wwwroot/js/plugins/jquery.mb.YTPlayer.min.js",
+      "wwwroot/js/plugins/jquery.simple-text-rotator.min.js",
+      "wwwroot/js/plugins/jquery.backstretch.js",
+      "wwwroot/js/plugins/jquery.singlePageNav.min.js"
+
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/red-plugins.min.js",
+    "inputFiles": [
+      "wwwroot/js/plugins/jquery.easing.js",
+      "wwwroot/js/plugins/SmoothScroll.js",
+      "wwwroot/js/plugins/owl.carousel.min.js",
+      "wwwroot/js/plugins/wow.min.js",
+      "wwwroot/js/plugins/isotope.pkgd.min.js",
+      "wwwroot/js/plugins/jquery.stellar.min.js",
+      "wwwroot/js/plugins/jquery.backstretch.js",
+      "wwwroot/js/plugins/jquery.singlePageNav.min.js"
+
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  }
+]

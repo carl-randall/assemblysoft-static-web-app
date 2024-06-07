@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
     <title>Assemblysoft .NET Specialists | ASP.NET Blazor | Azure | Fullstack Blazor</title>
     <meta name="description" content="Specialist .NET Development company. Experienced in Blazor, ASP.NET, ASP.NET Blazor, Azure DevOps and Microsoft Azure. Microsoft Partner. C# Cloud developers. Turning ideas into software. Based in Bournemouth Dorset.">
@@ -377,7 +377,7 @@
             margin-bottom: 0 !important
         }
 
-        @@media(max-width:767px) {
+        @media(max-width:767px) {
             .section-padding {
                 padding-top: 70px;
                 padding-bottom: 60px
@@ -1162,6 +1162,121 @@
         }
     </style>
 
+    <!--yes-->
+
+    <link rel="preload" href="/css/site.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/site.min.css"></noscript>
+
+    <link rel="preload" href="/css/bs.min.css?v=1.2" as="style" onload="this.onload=null;this.rel='stylesheet'" asp-append-version="true">
+    <noscript><link rel="stylesheet" href="/css/bs.min.css?v=1.2" asp-append-version="true"></noscript>
+
+    <link rel="preload" href="/css/plugins.min.css?v=1.2" as="style" onload="this.onload=null;this.rel='stylesheet'" asp-append-version="true">
+    <noscript><link rel="stylesheet" href="/css/plugins.min.css?v=1.2" asp-append-version="true"></noscript>
+
+
+    <!-- If you add any scoped CSS files, uncomment the following to load them
+    <link href="Assemblysoft-BlazorWebAssembly.styles.css" rel="stylesheet" /> -->
+
+
+
+
+    <style>
+
+        /* Hide the element by default */
+        .hero-toggle {
+            display: none;
+        }
+
+        .mob-only-toggle {
+            display: none;
+        }
+
+        /* Use a media query to show the element on screens wider than 600px */
+        @media (min-width: 601px) {
+            .hero-toggle {
+                display: block; /* or 'flex', 'inline-block', etc., depending on your layout */
+            }
+
+            .hero h2.alt-title {
+                font-size: 27px;
+                margin-top: 50px;
+            }
+
+            .hero .intro-content-inner {
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .mob-only-toggle {
+                display: block;
+            }
+
+            .hero .intro-content-inner {
+                margin-top: 40px;
+            }
+
+            .hero h2.alt-title {
+                margin-top: 80px;
+            }
+
+
+            .hero h3 {
+                font-size: 18px;
+            }
+
+            h3.custom {
+                color: dimgray;
+                font-size: 15px;
+            }
+
+
+            .hero h5 {
+                /* padding-bottom: 20px; */
+            }
+        }
+
+        .text-orange {
+            color: orange;
+        }
+
+        .text-primary {
+            color: deepskyblue;
+        }
+    </style>
+
+</head>
+
+<body class="wow-animate">
+
+    <!-- Site preloader -->
+    <section id="preloader">
+        <div class="site-spinner"></div>
+    </section>
+
+    <div id="app">
+        <!--<section id="preloader">
+            <div class="site-spinner"></div>
+        </section>-->
+
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script defer src="https://assemblysoft-min.azureedge.net/cdn/plugins.min.js?v=1.1" type="text/javascript" asp-append-version="true"></script>
+    <script defer src="https://kit.fontawesome.com/deab04a7db.js" crossorigin="anonymous"></script>
+
+
     <style type="text/css">
 
         .footer {
@@ -1209,56 +1324,20 @@
         }
     </style>
 
-    <link rel="preload" href="/css/site.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/site.min.css"></noscript>
-
-    <link rel="preload" href="/css/bs.min.css?v=1.2" as="style" onload="this.onload=null;this.rel='stylesheet'" asp-append-version="true">
-    <noscript><link rel="stylesheet" href="/css/bs.min.css?v=1.2" asp-append-version="true"></noscript>
-
-    <link rel="preload" href="/css/plugins.min.css?v=1.2" as="style" onload="this.onload=null;this.rel='stylesheet'" asp-append-version="true">
-    <noscript><link rel="stylesheet" href="/css/plugins.min.css?v=1.2" asp-append-version="true"></noscript>
-
-
-    <!-- If you add any scoped CSS files, uncomment the following to load them
-    <link href="Assemblysoft-BlazorWebAssembly.styles.css" rel="stylesheet" /> -->
-</head>
-
-<body class="wow-animate">
-
-    <!-- Site preloader -->
-    <section id="preloader">
-        <div class="site-spinner"></div>
-    </section>
-
-    <div id="app">
-        <!--<section id="preloader">
-            <div class="site-spinner"></div>
-        </section>-->
-
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
-    </div>
-
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script defer src="https://assemblysoft-min.azureedge.net/cdn/plugins.min.js?v=1.1" type="text/javascript" asp-append-version="true"></script>
-    <script defer src="https://kit.fontawesome.com/deab04a7db.js" crossorigin="anonymous"></script>
     <script src="/js/lazysizes.min.js" async></script>
     <script src="/js/site.js" async></script>
 
 
-    <script defer src="/js/theme.js" type="text/javascript" asp-append-version="true"></script>
-    <script src="/js/script.js" async></script>
+    <!--<script defer src="/js/theme.js" type="text/javascript" asp-append-version="true"></script>
+    <script src="/js/script.js" async></script>-->
+
+    <script defer src="/js/site.min.js" type="text/javascript" asp-append-version="true"></script>
+
 
     <script src="_framework/blazor.webassembly.js"></script>
+
+
+
 
 
 
