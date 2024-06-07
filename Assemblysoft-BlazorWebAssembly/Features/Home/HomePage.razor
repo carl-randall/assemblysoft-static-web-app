@@ -37,8 +37,6 @@
 
  
 <Header></Header>
- 
-@*Intro*@
 <section id="intro" class="intro black-bg hero">
     <div class="bg-image bg-midnight overlay-dark40 dark-bg parallax parallax-section">
         <div class="js-halfscreen-height container">
@@ -110,7 +108,10 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <a asp-controller="CaseStudies" asp-action="vitalme" title="Learn more about our work developing a Patient Care Record Management System" target="_more"><img loading="lazy" class="lazyload" src="/img/case-studies/vitalme/vitalme01.png" data-src="/img/case-studies/vitalme/vitalme01.png" alt="vitalme-patient-care-record-management-system" asp-append-version="true" style="max-width:250px;" /></a>
+                        @* <a asp-controller="CaseStudies" asp-action="vitalme" title="Learn more about our work developing a Patient Care Record Management System" target="_more"><img loading="lazy" class="lazyload" src="/img/case-studies/vitalme/vitalme01.png" data-src="/img/case-studies/vitalme/vitalme01.png" alt="vitalme-patient-care-record-management-system" asp-append-version="true" style="max-width:250px;" /></a> *@
+
+                        <a asp-controller="CaseStudies" asp-action="vitalme" title="Learn more about our work developing a Patient Care Record Management System" target="_more"><img loading="lazy" class="lazyload" src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/case-studies/vitalme/vitalme01.png" data-src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/case-studies/vitalme/vitalme01.png" alt="vitalme-patient-care-record-management-system" asp-append-version="true" style="max-width:250px;" /></a>
+                                                
                     </div>
 
                 </div>

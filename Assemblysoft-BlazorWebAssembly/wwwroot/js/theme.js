@@ -24,7 +24,6 @@ function remove_loader(value) {
 function InitPage(value) {
 
     console.log(value);
-
     $(function () {
         "use strict";
 
@@ -37,14 +36,10 @@ function InitPage(value) {
             init_wow_animation();
             int_isotopPortfolio();
             int_lightbox();
-            int_Elements();          
+            int_Elements();
         });
 
-
         $(window).load(function () {
-
-            console.log('window.load');
-
             int_isotopPortfolio();
 
             // Site Preloader
@@ -66,16 +61,11 @@ function InitPage(value) {
             stickHeader();
         });
 
-
-
-
         // ---------------------------------------------------------------------------------------------------------------------------->
         // SCROLL FUNCTIONS   ||-----------
         // ---------------------------------------------------------------------------------------------------------------------------->
 
         function init_scroll() {
-
-            console.log('init_scroll');
 
             $('.scroll-top').click(function () {
                 $('html, body').animate({ scrollTop: 0 }, 2000);
@@ -114,12 +104,10 @@ function InitPage(value) {
         // Intro Height
         // ----------------------------------------------------------------
         function int_introHeight() {
-
-            console.log('int_introHeight');
-
             var windiwHeight = $(window).height();
             // Intro Height
             $('.js-fullscreen-height').css('height', windiwHeight - 150);
+            $('.js-halfscreen-height').css('height', windiwHeight - 350);
         };
 
 
@@ -643,11 +631,6 @@ function InitPage(value) {
                 };
             }
         });
-
-
-
-
-
 
     });
 

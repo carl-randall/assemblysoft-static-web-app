@@ -1,0 +1,756 @@
+﻿@page "/outsourcing"
+@inject IJSRuntime JSRuntime
+
+
+<PageTitle>Home Page</PageTitle>
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("Component initialized");
+        //Task.Delay(4000);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        //await Task.Delay(4000);
+        Console.WriteLine("Component async initialized");
+
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Console.WriteLine("Component rendered completely");
+
+            await JSRuntime.InvokeVoidAsync("InitPage", "component rendered!");
+
+            //await Task.Delay(4000);
+            await JSRuntime.InvokeVoidAsync("remove_loader", "remove spinner");
+
+        }
+    }
+}
+
+
+
+<Header></Header>
+<section id="intro" class="intro black-bg hero">
+    <div class="bg-image bg-midnight overlay-dark40 dark-bg parallax parallax-section">
+        <div class="js-halfscreen-height container">
+            <div class="intro-content">
+                <div class="intro-content-inner">
+
+                    <h2 class="alt-title intro-sub-title secondary-color">We Build <a asp-controller="services" asp-action="customdev">Custom software</a><span class="hero-toggle"> solutions enabling you to <span class="color-theme">accelerate growth</span></span></h2>
+                    <h3><a class="color-theme" asp-controller="technologies" asp-action="blazorunited"><i class="fas fa-globe"></i>&nbsp;Web</a> | <a style="color:deepskyblue;" asp-controller="technologies" asp-action="blazorhybrid"><i class="fas fa-mobile-alt"></i>&nbsp;Mobile</a> | <a style="color:deepskyblue;" asp-controller="technologies" asp-action="azure"><i class="fas fa-cloud"></i>&nbsp;Cloud</a></h3>
+                    <h5 class="alt-title intro-sub-title mb-0">Applications Engineered to your Business</h5>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="service" class="section-padding">
+    <div class="container text-center">
+
+        <h1 class="mb-60 page-title intro-title"><span class="underline">Build Custom Software</span> <strong>from scratch or modernise existing</strong> solutions with a leading Software Development Company</h1>
+        <h3 class="custom alt-title mb-0 text-center">Based in the United Kingdom</h3>
+        <a href="#start" class="btn btn-lg btn-black mt-25">Tell us what you need.</a>
+    </div>
+</section>
+
+@*video testimonial*@
+<section class="section-padding bg-image dark-bg pos-section overlay-dark" data-stellar-background-ratio="0.4">
+    <div class="page-triangle white-bg"></div>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">WHAT IS IT LIKE TO WORK WITH <span class="text-primary">ASSEMBLYSOFT?</span></h2>
+            <h2 class="text-center page-title intro-title">CUSTOMER CASE STUDY</h2>
+            <div class="col-md-5 mb-sm-45">
+                <h2 class="alt-title"><span class="text-primary">Custom software</span> expertly designed and built by <span class="text-orange">Microsoft Certified Developers</span></h2>
+
+                <div class="item">
+                    <div class="testimonial text-center max-width-700">
+                        <div class="page-icon-sm"><i class="fas fa-quote-right" style="color:deepskyblue;"></i></div>
+                        <p class="lead-lg">
+                            Assemblysoft have consistently proven themselves as trustworthy, responsive partners.
+                        </p>
+                        <a target="_blank" href="https://g.page/assemblysoft">
+                            <span class="fa fa-star fa-sm checked"></span>
+                            <span class="fa fa-star fa-sm checked"></span>
+                            <span class="fa fa-star fa-sm checked"></span>
+                            <span class="fa fa-star fa-sm checked"></span>
+                            <span class="fa fa-star fa-sm checked"></span>
+                        </a>
+                        <h6 class="quote-author alt-title">David Roome <span class="text-regular mob-only-toggle">( COO - Synapser )</span><span class="text-regular hero-toggle">( Chief Operations Officer - Synapser )</span></h6>
+                    </div>
+                </div>
+
+                <p class="lead-lg">Team up with a <span style="color:deepskyblue;">software partner</span> who pride themselves on <span style="color:deepskyblue;">sustainable development</span> best practice.</p>
+                <div class="mt-30">
+                </div>
+            </div>
+            <div class="col-md-7 text-right wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+
+                <div class="embed-responsive embed-responsive-16by9 player">
+                    <iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/Xe1clIGNCVA" title="This video highlights what it was like to work with Assemblysoft to design and build a number of Blazor applications for the medical and pharmaceutical industries. It takes the form of a testimonial from the COO of Synapser who describes why Synapser reached out to Assemblysoft and what the experience was like migrating a Flash application to a Blazor Server application and also the experience of developing a greenfield .NET MAUI Blazor Hybrid application with Assemblysoft to manage a patient care record" allowfullscreen></iframe>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 text-left pt-10">
+                        <p class="lead"><a class="link features-block-link" asp-controller="CaseStudies" asp-action="vitalme" title="Learn more about our work developing a Patient Care Record Management System" target="_more"><span style="color:whitesmoke;">READ FULL CASE STUDY &nbsp;<i class="fas fa-book-reader"></i></span></a></p>
+                        <p class="lead"><a class="link features-block-link" asp-controller="CaseStudies" asp-action="Index"><span style="color:whitesmoke;">MORE CASE STUDIES &nbsp;<i class="fas fa-book-open"></i></span></a></p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <a asp-controller="CaseStudies" asp-action="vitalme" title="Learn more about our work developing a Patient Care Record Management System" target="_more"><img loading="lazy" class="lazyload" src="/img/case-studies/vitalme/AdobeStock_441578113.jpeg" data-src="/img/case-studies/vitalme/AdobeStock_441578113.jpeg" alt="vitalme-patient-care-record-management-system" asp-append-version="true" style="max-width:250px;" /></a>
+
+                        <a asp-controller="CaseStudies" asp-action="vitalme" title="Learn more about our work developing a Patient Care Record Management System" target="_more"><img loading="lazy" class="lazyload" src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/case-studies/vitalme/vitalme01.png" data-src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/case-studies/vitalme/vitalme01.png" alt="vitalme-patient-care-record-management-system" asp-append-version="true" style="max-width:250px;" /></a>
+
+                        
+
+                        
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .skillbar-bar-child {
+        background: red;
+    }
+</style>
+
+@* <section id="expertise" class="section-padding pos-section white-bg bg-image overlay-light" data-stellar-background-ratio="0.4" data-background-img="img/bg/tech2.webp" style="background-image: url(&quot;img/bg/tech1.png&quot;); background-position: 50% -261.15px;"> *@
+<section id="expertise" class="section-padding pos-section white-bg">
+    <!-- page triangle shape -->
+    <div class="page-triangle white-bg"></div>
+    <!-- End page triangle shape -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="alt-title">Our Development Expertise</h2>
+                <p class="large">We deliver software that just works.</p>
+                <p class="large">We know what to use when and how to get it right, on time and on budget.</p>
+                <h6 class="quote-author alt-title mt-25">— End-to-end. We have you covered. </h6>
+
+                <img src="/img/certs/certified-professionsald.png" />
+            </div>
+            <div class="col-md-6">
+                <div data-percent="100%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">Desktop Applications</h6>
+                    <div class="skill-bar-percent"></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 55%;"></div>
+                    </div>
+                </div>
+                <div data-percent="100%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">Mobile Applications</h6>
+                    <div class="skill-bar-percent"></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div data-percent="100%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">Web Applications</h6>
+                    <div class="skill-bar-percent"></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div data-percent="100%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">Cloud Native Solutions</h6>
+                    <div class="skill-bar-percent"></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div data-percent="100%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">DevOps</h6>
+                    <div class="skill-bar-percent"></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div data-percent="100%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">IoT</h6>
+                    <div class="skill-bar-percent"></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div data-percent="100%" class="skillbar hero-toggle">
+                    <h6 class="skillbar-title alt-title">AI</h6>
+                    <div class="skill-bar-percent"></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div data-percent="100%" class="skillbar hero-toggle">
+                    <h6 class="skillbar-title alt-title">Cross Platform</h6>
+                    <div class="skill-bar-percent"></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .player {
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 1;
+    }
+</style>
+
+<section id="social_section" class="section-padding bg-image dark-bg pos-section overlay-dark" data-stellar-background-ratio="0.4">
+    <div class="page-triangle white-bg"></div>
+
+    @* @Html.Partial("_ClientLogoCarousel_Partial") *@
+
+</section>
+
+<section class="section-padding">
+
+    <h2 class="mb-60 text-center">With over 25 years experience, It's what we do, It's ingrained in our <strong>DNA</strong></h2>
+    <div class="white-bg pos-section text-center" style="padding-left:30px;padding-right:30px;">
+
+
+        <div class="alt-icon-top alt-icon-color">
+            <a class="external" asp-controller="Services" asp-action="SoftwareDevelopmentOutsourcing">
+                <img loading="lazy" class="lazyload client-logo-md" data-src="/img/partners/assemlysoft-ms-partner-logo2.png" alt="We are are Microsoft Partners providing you with key insights" />
+            </a>
+        </div>
+
+        <div class="testimonial text-center max-width-700">
+            <div class="page-icon-sm"><i class="fas fa-quote-right" style="color:deepskyblue;"></i></div>
+            <p class="lead-lg">
+                I worked with Carl from Assemblysoft at Solidsoft Reply on a large-scale greenfield Azure project and can highly recommend him on both a technical and personal level. He's an accountable, committed and skilled person, and I had a great experience working with him and his team.
+            </p>
+            <h6 class="quote-author alt-title">Paolo Salvatori <span class="text-regular">( Principal Systems Engineer at Microsoft )</span></h6>
+        </div>
+    </div>
+
+</section>
+
+<section class="ptb-45 bg-midnight dark-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h3 class="action-box-title mt-10"><span style="color:orange">Hire</span> a skilled <span style="color:orange">Project Manager</span> and dedicated <span style="color:orange"> Development Team </span>for your next project.</h3>
+            </div>
+            <div class="col-sm-4 text-right">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="how" class="section-padding-sm">
+    <div class="container text-center">
+        <h2 class="mb-60">How We Do It</h2>
+        <h3 class="lead-lg">Our process. <strong><span class="underline">Simple, Seamless, Streamlined</span>.</strong></h3>
+    </div>
+    <div class="container">
+
+        @* Tab Navigation *@
+        <ul class="icon-tab-nav tabs" data-tabgroup="tab-group-how">
+            <li>
+                <a href="#tab1" class="active" style="display:block;">
+                    <i class="fas fa-phone"></i>
+                    <h5 class="icon-tab-nav-title alt-title">1: DISCOVERY CALL.</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#tab2" class="" style="display:block;">
+                    <i class="fas fa-users"></i>
+                    <h5 class="icon-tab-nav-title alt-title">2: ONBOARD TEAM.</h5>
+                </a>
+
+            </li>
+            <li>
+                <a href="#tab3" class="" style="display:block;">
+                    <i class="fas fa-rocket"></i>
+                    <h5 class="icon-tab-nav-title alt-title">3: BEGIN PROJECT.</h5>
+                </a>
+            </li>
+
+        </ul>
+        @* Tab Navigation
+        Tab Content *@
+        <div class="tab-content mt-45" id="tab-group-how" style="height: auto;">
+
+            <div class="tab-pane" id="tab1" style="display: block;">
+                <div class="row">
+
+                    <div class="col-md-6 mb-sm-45">
+
+                        <i class="fas fa-phone"></i>
+                        <span class="lead-lg">Complete a discovery call.</span>
+
+                        <p class="lead-lg mt-10">Tell us more about your business on a discovery call. We’ll discuss your project requirements, success criteria, timescale, budget and required skill sets to see if we can help.</p>
+                        <h6 class="quote-author alt-title mt-25">— Expert Assessment</h6>
+
+                    </div>
+
+                    <div class="col-md-6 mb-sm-45">
+                        <div style="bottom:50px;left:50px;">
+                            <img loading="lazy" src="~/img/services/azure.svg" style="position:absolute;width:55px;bottom:1px;" />
+                            <img loading="lazy" src="~/img/services/blazor.svg" style="position:absolute;width:50px;bottom:5px;left:70px;" />
+                        </div>
+
+                        <img loading="lazy" src="~/img/bg/how-1.webp" style="width: 100%;" alt="">
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="tab-pane" id="tab2" style="display: block;">
+                <div class="row">
+
+                    <div class="col-md-6 mb-sm-45">
+
+                        <i class="fas fa-users"></i>
+                        <span class="lead-lg">Get a team and dedicated PM.</span>
+
+                        <p class="lead-lg mt-10">We’ll quickly assemble your team and assign you a Project Manager. We’ll define your project roadmap, select the right tools and technologies, and get everyone on board.</p>
+                        <h6 class="quote-author alt-title mt-25">— Assemble Team</h6>
+
+                    </div>
+
+                    <div class="col-md-6 mb-sm-45">
+                        <div style="bottom:50px;left:50px;">
+                            <img loading="lazy" src="~/img/services/azure.svg" style="position:absolute;width:55px;bottom:1px;" />
+                            <img loading="lazy" src="~/img/services/blazor.svg" style="position:absolute;width:50px;bottom:5px;left:70px;" />
+                        </div>
+
+                        <img loading="lazy" src="~/img/bg/how-2.webp" style="width: 100%;" alt="">
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab-pane" id="tab3" style="display: block;">
+                <div class="row">
+
+                    <div class="col-md-6 mb-sm-45">
+
+                        <i class="fas fa-rocket"></i>
+                        <span class="lead-lg">Begin project and track performance.</span>
+
+                        <p class="lead-lg mt-10">After onboarding, your team will get to work immediately. You can track progress, in real-time, manage the team priorities, and scale your headcount up or down as needed.</p>
+                        <h6 class="quote-author alt-title mt-25">— Off your plate</h6>
+
+                    </div>
+
+                    <div class="col-md-6 mb-sm-45">
+                        <div style="bottom:50px;left:50px;">
+                            <img loading="lazy" src="~/img/services/azure.svg" style="position:absolute;width:55px;bottom:1px;" />
+                            <img loading="lazy" src="~/img/services/blazor.svg" style="position:absolute;width:50px;bottom:5px;left:70px;" />
+                        </div>
+
+                        <img loading="lazy" src="~/img/bg/Innovation-2.webp" style="width: 100%;" alt="">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        @* End Tab Content *@
+    </div>
+</section>
+
+<section id="counter" class="section-padding bg-image dark-bg pos-section overlay-dark" data-stellar-background-ratio="0.4" data-background-img="img/bg/tech2.webp" style="background-image: url(&quot;img/bg/tech2.webp&quot;); background-position: 50% -337.075px;">
+    <!-- page triangle shape -->
+    <div class="page-triangle white-bg"></div>
+    <!-- End page triangle shape -->
+    <div class="container text-center">
+        <div class="rows">
+            <h2 class="mb-60">Our Team, Your Time Zone</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-sm-30">
+                <div class="counter-group">
+                    <div class="counter-icon"><i class="fas fa-globe-europe"></i></div>
+                    <div class="counter-content">
+                        <h2 class="counter-title counter-num">30</h2>
+                        <h5 class="alt-title counter-sub-title">&nbsp;Europe</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-sm-30">
+                <div class="counter-group">
+                    <div class="counter-icon"><i class="fas fa-globe-americas"></i></div>
+                    <div class="counter-content">
+                        <h2 class="counter-title counter-num">25</h2>
+                        <h5 class="alt-title counter-sub-title">&nbsp;America</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-sm-30">
+                <div class="counter-group">
+                    <div class="counter-icon"><i class="fas fa-globe-africa"></i></div>
+                    <div class="counter-content">
+                        <h2 class="counter-title counter-num">05</h2>
+                        <h5 class="alt-title counter-sub-title">&nbsp;Africa</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-sm-30">
+                <div class="counter-group">
+                    <div class="counter-icon"><i class="fas fa-globe-asia"></i></div>
+                    <div class="counter-content">
+                        <h2 class="counter-title counter-num">06</h2>
+                        <h5 class="alt-title counter-sub-title">&nbsp;Asia</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container text-center">
+
+        <div class="rows">
+            <h2 class="alt-title intro-sub-title">From Concept To Completion</h2>
+            <h2 class="intro-sub-title">Our Full-Stack Expertise.</h2>
+        </div>
+        <div class="row">
+
+            <div class="col-md-4 content-box mb-45">
+                <div class="alt-icon-top icon-orange">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h4 class="alt-title">
+                    <a asp-controller="services" asp-action="customdev">Custom Software Development</a>
+                </h4>
+                <p class="lead">Build custom software tailored to your specific business needs, including front-end interfaces and core back-end technology.</p>
+            </div>
+            <div class="col-md-4 content-box mb-45">
+                <div class="alt-icon-top icon-green">
+                    <i class="fas fa-check-double"></i>
+                </div>
+                <h4 class="alt-title">
+                    Quality Assurance and Testing
+                </h4>
+                <p class="lead">Ensure technology products and services are robust and error-free through manual and automated Quality Assurance.</p>
+            </div>
+            <div class="col-md-4 content-box mb-45">
+                <div class="alt-icon-top icon-blue">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <h4 class="alt-title">
+                    AI and Data Engineering Science
+                </h4>
+                <p class="lead">Identify and leverage hidden patterns in your data, use machine learning, AI, with modern data engineering principles.</p>
+            </div>
+            <div class="col-md-4 content-box mb-45">
+                <div class="alt-icon-top icon-blue">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h4 class="alt-title">
+                    <a asp-controller="technologies" asp-action="blazorhybrid">Mobile App Development</a>
+
+                </h4>
+                <p class="lead">Develop high performance, secure mobile applications targeting iOS, Android and Windows devices.</p>
+            </div>
+            <div class="col-md-4 content-box mb-45">
+                <div class="alt-icon-top icon-orange">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <h4 class="alt-title">UX/UI Design</h4>
+                <p class="lead">Create beautiful, user-friendly designs for websites, mobile apps, and other human-machine interfaces.</p>
+            </div>
+            <div class="col-md-4 content-box mb-45">
+                <div class="alt-icon-top icon-green">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <h4 class="alt-title">
+                    <a asp-controller="technologies" asp-action="ado">Platform and Infrastructure</a>
+                </h4>
+                <p class="lead">Ensure applications are secure, fault tolerant and highly available with our DevOps and Security engineers.</p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="ptb-80 black-bg dark-bg">
+    <div class="container text-center">
+        <h4 class="max-width-700 page-title intro-title">Choose a software development partner who <span class="underline">really cares about your business.</span></h4>
+        <h4 class="max-width-700">You have ideas. We have the software expertise.</h4>
+        <a href="#start" class="btn btn-lg btn-white mt-15">Tell us what you need.</a>
+
+
+    </div>
+</section>
+
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 content-box mb-sm-45">
+                <h4 class="alt-title">Why Assemblysoft?</h4>
+                <p class="lead-lg hero-toggle">
+                    We are able to onboard with your vision and existing software rapidly.
+                </p>
+
+                <p class="lead-lg hero-toggle">
+                    We can design and build from scratch or modernise existing solutions.
+                </p>
+
+                <p class="lead-lg">
+                    We have <strong>solid experience producing robust software</strong> solutions having been involved in hundreds of successful software projects for enterprise organisations, medium sized businesses and startups.
+                </p>
+            </div>
+            <div class="col-md-4 content-box mb-sm-45">
+                <h4 class="alt-title">What are our Key attributes?</h4>
+                <p class="lead-lg">
+                    We are <strong>extremely bright and <span class="underline">engaging at all levels</span></strong>.
+                </p>
+                <p class="lead-lg hero-toggle">
+                    We keep abreast of the latest technologies and design patterns.
+                </p>
+
+                <p class="lead-lg">
+                    We <strong><span class="underline">keep your business in mind at all times</span></strong>, ensuring decisions add tangible value. We can spot nice to haves over needs.
+                </p>
+
+
+            </div>
+            <div class="col-md-4">
+                <h4 class="alt-title">What do we provide?</h4>
+                <div data-percent="99%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">Project Manager</h6>
+                    <div class="skill-bar-percent"><i class="fas fa-check" style="color: green;"></i></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 100%;background:green;"></div>
+                    </div>
+                </div>
+                <div data-percent="99%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">Expert Development Team</h6>
+                    <div class="skill-bar-percent"><i class="fas fa-check" style="color: green;"></i></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 100%;background:green;"></div>
+                    </div>
+                </div>
+                <div data-percent="99%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">Live Progress 24/7</h6>
+                    <div class="skill-bar-percent"><i class="fas fa-check" style="color: green;"></i></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 100%;background:green;"></div>
+                    </div>
+                </div>
+                <div data-percent="99%" class="skillbar">
+                    <h6 class="skillbar-title alt-title">Clear Stakeholder Communication</h6>
+                    <div class="skill-bar-percent"><i class="fas fa-check" style="color: green;"></i></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 100%;background:green;"></div>
+                    </div>
+                </div>
+                <div data-percent="99%" class="skillbar hero-toggle">
+                    <h6 class="skillbar-title alt-title">Agile processes</h6>
+                    <div class="skill-bar-percent"><i class="fas fa-check" style="color: green;"></i></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 100%;background:green;"></div>
+                    </div>
+                </div>
+                <div data-percent="99%" class="skillbar hero-toggle">
+                    <h6 class="skillbar-title alt-title">Deep Insights</h6>
+                    <div class="skill-bar-percent"><i class="fas fa-check" style="color: green;"></i></div>
+                    <div class="skillbar-bar">
+                        <div class="skillbar-bar-child" style="width: 100%;background:green;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ptb-45 bg-midnight dark-bg">
+    <div class="container">
+        <div class="row">
+
+            <h2 class="alt-title intro-sub-title">
+                Partner with us as your safe pair of hands as we <span class="text-rotate color" style="text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px; opacity: 1;">design,build,test,deploy,launch,deliver,support</span> <br /><span style="color:orange">your project</span> with <span class="text-rotate color" style="text-shadow:rgba(0, 0, 0, 0) 0px 0px 0px; opacity: 1;">expertise,care,transparency,skill,agility,dedication,integrity,efficiency,experience,innovation,sustainability</span>
+            </h2>
+        </div>
+
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="rows">
+
+            <div class="intro-content">
+                <div class="intro-content-inner">
+                    <audio controls>
+                        <source src="https://assemblysoftstoragev2.blob.core.windows.net/cdn/AssemblysoftScript1.mp3" preload="metadata" type="audio/mpeg" title="Listen to what a partnership with Assemblysoft can mean for your business">
+                    </audio>
+
+                </div>
+            </div>
+
+            <div class="text-center mb-2">
+                <h2>We <strong style="color:deepskyblue;">code</strong> AND <strong style="color:deepskyblue;">decode</strong> technical solutions</h2>
+                <h2 class="lead-lg hero-toggle">Solving problems and turning ideas into secure and reliable software solutions, <strong>but we are much more than that.</strong></h2>
+
+                <div style="margin-right:20px; margin-bottom:0px;padding-bottom:0px;" class="text-right">
+                    <a class="scroll-down btn btn-xlg btn-black-outline" href="https://www.canva.com/design/DAFU0TcmauE/JBMA6s-9BoFyZp6ELq5RYQ/view?utm_content=DAFU0TcmauE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank" rel="noopener">View Elevator Pitch...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr />
+
+<section id="innovation" class="pt-80">
+    <div class="container text-center">
+        <h2 class="mb-60">WHY NOW COULD BE THE RIGHT TIME FOR INNOVATION</h2>
+    </div>
+    <div class="container">
+
+        <div class="history-box history-box-before mb-30">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <h6 class="alt-title history-year">Before</h6>
+                    <h4 class="alt-title history-title">Is your current software holding your business back?</h4>
+                    <img src="~/img/bg/Innovation_1.webp" style="width: 100%;" alt="">
+                </div>
+
+                <div class="col-md-6">
+
+                    <h6 class="alt-title history-year history-year-grey">Red Flags</h6>
+
+                    <p class="lead history-content question-before">Is your product's growth being hindered?</p>
+                    <p class="lead history-content question-before">Are you missing the capability to develop your own software?</p>
+                    <p class="lead history-content question-before">Has your business outgrown your current software?</p>
+                    <p class="lead history-content question-before">Is your software leaving you exposed to cyber threats?</p>
+                    <p class="lead history-content question-before">Is maintaining a legacy monolith eating into your budget?</p>
+                    <p class="lead history-content question-before">Will you miss business opportunities by staying as you are?</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="history-box history-box-after mb-10">
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <h6 class="alt-title history-year">After</h6>
+                    <h4 class="alt-title history-title">Advantages of a custom Blazor application built by Assemblysoft</h4>
+
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Future ready.</p>
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Great User experience (UX).</p>
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Cloud native.</p>
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Easily updated and deployed.</p>
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Secure.</p>
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Maintainable.</p>
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Clean architecture.</p>
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Best practices.</p>
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Sustainable.</p>
+                    <p class="lead history-content question"><i class="fas fa-check" style="color: green;"></i>&nbsp;Modular.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="alt-title">A Sustainable .NET Blazor application that enables growth and innovation</h4>
+
+                    <img src="~/img/bg/Innovation-2.webp" style="width: 100%;" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="statement section-padding" class="bg-grad-purple section-padding bg-image pos-section wow fadeIn" data-wow-duration="0.3s" data-wow-delay="0.2s">
+
+    <div class="page-triangle white-bg"></div>
+    <div class="container text-center ptb-45">
+
+        <h2 class="lead-lg white pb-10">We have a unique ability, gained over many years, to <strong style="color:orange">convey complex into simple.</strong></h2>
+
+
+        <div class="row pr-2 pl-2">
+
+            <div class="col-sm-4 text-left">
+                <p class="lead-lg mb-10 white"><i class="fas fa-check"></i>&nbsp;In house team</p>
+                <p class="lead-lg mb-10 white"><i class="fas fa-check"></i>&nbsp;UK managed &nbsp;</p>
+                <p class="lead-lg mb-10 white hero-toggle"><span style="color:deepskyblue;"><i class="fas fa-check"></i>&nbsp;Transparent</span></p>
+                <p class="lead-lg mb-10 white hero-toggle"><span style="color:deepskyblue;"><i class="fas fa-check"></i>&nbsp;Scalable</span></p>
+                <p class="lead-lg mb-10 white hero-toggle"><i class="fas fa-check"></i>&nbsp;Agile</p>
+                <p class="lead-lg mb-10 white"><span style="color:deepskyblue;"><i class="fas fa-check"></i>&nbsp;Cost effective</span></p>
+                <p class="lead-lg mb-10 white hero-toggle"><i class="fas fa-check"></i>&nbsp;Highly skilled</p>
+            </div>
+
+            <div class="col-sm-4 text-right">
+                <p class="lead-lg mb-10 white">Cloud native solutions &nbsp;<i class="far fa-star text-right"></i></p>
+                <p class="lead-lg mb-10 white hero-toggle">Migration to the cloud &nbsp;<i class="far fa-star"></i></p>
+                <p class="lead-lg mb-10 white">Mobile applications &nbsp;<i class="far fa-star"></i></p>
+                <p class="lead-lg mb-10 white">Web applications &nbsp;<i class="far fa-star"></i></p>
+                <p class="lead-lg mb-10 white">DevOps pipelines &nbsp;<i class="far fa-star"></i></p>
+                <p class="lead-lg mb-10 white hero-toggle">Bespoke software &nbsp;<i class="far fa-star"></i></p>
+                <p class="lead-lg mb-10 white">Prototypes & MVPs &nbsp;<i class="far fa-star"></i></p>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <img data-src="/img/services/dotnet-bot-maui-cross-platform-development.png" style="max-height:300px;max-width:300px;" alt="Assemblysoft host Blazor and .Net User group presentations as members of the dotnet foundation." />
+                <p class="lead-lg mb-10 white"><a class="light" asp-controller="technologies" asp-action="blazorunited">.NET Blazor experts</a></p>
+                <p class="lead-lg mb-10 white"><a class="light" asp-controller="technologies" asp-action="ado">Azure DevOps experts</a></p>
+                <p class="lead-lg mb-10 white"><a class="light" asp-controller="technologies" asp-action="azure">Microsoft Azure development experts</a></p>
+                <p class="lead-lg mb-10 white"><a class="light" asp-controller="technologies" asp-action="dotnet">.NET Specialists</a></p>
+                <p class="lead-lg mb-10 white"><a class="light" asp-controller="technologies" asp-action="windows">Windows Desktop developers</a></p>
+                <p class="lead-lg mb-10 white"><a class="light" asp-controller="technologies" asp-action="aspnet">ASP.NET developers</a></p>
+                <p class="lead-lg mb-10 white"><span class="text-orange">Microsoft Certified</span> developers</p>
+            </div>
+
+        </div>
+
+
+        <div class="row mt-15">
+            <h3 class="mb-30 white hero-toggle">We build custom software applications backed by cloud native services, combined with <span style="color:deepskyblue;">solid solutions architecture</span> to produce <span style="color:deepskyblue;">secure, robust,</span> <span class="text-orange">sustainable software</span> that our clients love.</h3>
+        </div>
+
+        @* <a class="btn-Action btn-white-outline btn-lg scroll-down" href="#contact"><i class="fa fa-send"></i>&nbsp;Contact Us</a> *@
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="ptb-60 black-bg text-center dark-bg">
+    <div class="container">
+        <div class="row">
+            <h2>Let us know how our team can support you, with some brief details of what your looking to achieve.</h2>
+            <h3>We can then arrange a free consultation to discuss further with you.</h3>
+        </div>
+    </div>
+</section>

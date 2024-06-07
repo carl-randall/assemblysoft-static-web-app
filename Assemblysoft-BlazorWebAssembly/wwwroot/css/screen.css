@@ -68,7 +68,7 @@ body {
 /* Full width page blocks */
 .outer {
     position: relative;
-    padding: 0 5vw;
+    /*padding: 0 5vw;*/
 }
 
 /* Centered content container blocks */
@@ -933,15 +933,17 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post-template .site-main,
 .page-template .site-main {
-    margin-top: 64px;
+    /*margin-top: 64px;*/
+    margin-top: 30px;
     padding-bottom: 4vw;
-    background: #fff;
+    /*background: #fff;*/
+    background: #0a0b0c;
 }
 
 .post-full-header {
     position: relative;
     margin: 0 auto;
-    padding: 70px 170px 50px;
+    /*padding: 70px 170px 50px;*/
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
@@ -1026,7 +1028,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-content {
     position: relative;
     margin: 0 auto;
-    padding: 0 170px 6vw;
+    /*padding: 0 170px 6vw;*/
     min-height: 230px;
     font-family: Georgia, serif;
     font-size: 19.2px;

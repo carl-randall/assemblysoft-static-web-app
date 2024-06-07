@@ -850,7 +850,7 @@ header.header-light .nav-bar-icon > span, header.header-light .nav-bar-icon > sp
     }
 
     .overlay-menu-nav li:hover a {
-        color: #17a697
+        color: deepskyblue;        
     }
 
 .overlay-menu-close {
