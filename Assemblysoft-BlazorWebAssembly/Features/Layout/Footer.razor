@@ -1,0 +1,308 @@
+﻿@using System.Globalization
+@inject IJSRuntime JSRuntime
+
+<style>
+    #form-target {
+        padding: 40px;
+    }
+
+    .checked {
+        color: orange;
+    }
+</style>
+
+<!-- Contact Infobar Section -->
+<section id="contact" class="ptb-60 black-bg text-center dark-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-sm-30">
+                <a href="tel:+441202428719">
+                    <div class="contact-info">
+                        <div class="alt-icon-top alt-icon-color">
+                            <i class="fa fa-phone" style="color: deepskyblue;"></i>
+                        </div>
+                        <p class="large">+44 (0) 1202 428719 (UK) (Bournemouth)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-sm-30">
+                <a href="https://g.page/assemblysoft?share" target="_blank">
+                    <div class="contact-info">
+                        <div class="alt-icon-top alt-icon-color">
+                            <i class="fa fa-map-pin" style="color: deepskyblue;"></i>
+                        </div>
+                        <p class="large">
+                            2 Woodland Walk, Bournemouth, Dorset BH5 1LU, United Kingdom
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-sm-30">
+                <a href="mailto:hello@assemblysoft.com">
+                    <div class="contact-info">
+                        <div class="alt-icon-top alt-icon-color">
+                            <i class="far fa-envelope" style="color: deepskyblue;"></i>
+                        </div>
+                        <p class="large">hello@assemblysoft.com</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding" id="start">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="action-box-title mt-10">Start a meaningful conversation with us today.</h3>
+            </div>
+            <div id="ctx" class="col-sm-8" style="background:#fff;box-shadow: 0 4px 8px 0 rgba(53,105,128,.3),0 6px 20px 0 rgba(165,200,213,.41);padding:40px;">
+                
+                @* <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script> *@
+                <script>
+                    hbspt.forms.create({
+                        region: "eu1",
+                        portalId: "143286572",
+                        formId: "fd02aa9b-1fd6-4c70-8c01-761b260af664"
+                    });
+                </script>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faqs" class="section-padding-sm">
+
+    <div class="container">
+
+        <!-- Accordion -->
+        <div class="col offset-md-2">
+            <h3 class="alt-title  mb-30">FAQs</h3>
+            <div class="accordion">
+                <div class="accordion-title">
+                    <a href="">How does a partnership with Assemblysoft work?</a>
+                </div>
+                <div class="accordion-content" style="display: none;">
+                    <p>We pride ourselves in building and maintaining firm relationships with our clients, working in an honest, transparent way, while delivering expert services.</p>
+                    <p>Throughout the project you'll be provided with a talented team who are <strong>both technical and engaging</strong> for you and your clients. We ensure each hand-picked expert fits right in with your culture from day one.</p>
+                    <ul>
+                        <li><strong>Technical Project Manager</strong> who will be your day to day point of reference for updates and priorities.</li>
+                        <li><strong>Development Team</strong> comprising a <strong>perfect blend of technical skills and communication</strong> to perfectly design and build your solution.</li>
+                        <li><strong>Client Engagement Manager</strong> ensuring alignment with your roadmap and business vision.</li>
+                    </ul>
+                </div>
+                <div class="accordion-title">
+                    <a href="">What are Assemblysoft's terms of payment?</a>
+                </div>
+                <div class="accordion-content" style="display: none;">
+                    <p>Projects are generally paid for weekly, based on the technical resources being utilised and features being built within a specific development phase. As we work in an agile manner, we are flexible, ensuring you remain in control  of priorities, and where development effort is being directed at all times.</p>
+                    <p>We share a <strong>'live' project development plan</strong> with you, which is updated regularly, providing you with a clear understanding of cost versus benefit.</p>
+                    <p>Our terms of payment are flexible and can be adapted to suit you.</p>
+                </div>
+                <div class="accordion-title">
+                    <a href="">Do you provide knowledge transfer?</a>
+                </div>
+                <div class="accordion-content" style="display: none;">
+                    <p>Yes, to ensure the success of projects we'll provide demonstrations and supporting documentation as required to nominated individuals within your business.</p>
+                </div>
+                <div class="accordion-title">
+                    <a href="">Do you provide visual design services?</a>
+                </div>
+                <div class="accordion-content" style="display: none;">
+                    <p>Yes. We can operate as a one stop shop or work with your designer.</p>
+                    <p>We can produce stunning mock designs, based on your vision. We can turn a design into a working prototype.</p>
+                    <p>We can integrate your design into the application code base, to deliver a user interface (UI) and user experience (UX) that compliments your brand, providing delight to your users.</p>
+                    <p>We know the responsiveness, look and feel, and branding, represent you and your business, which is why we take meticulous care ensuring we present your business as if it were our own.</p>
+                </div>
+                <div class="accordion-title">
+                    <a href="">Why is Blazor and Azure such a good combination?</a>
+                </div>
+                <div class="accordion-content" style="display: none;">
+                    <p>In short, the combination of Blazor and Azure offers a powerful, scalable, and efficient platform for building and deploying modern web applications with robust back-end capabilities, seamless integration, enhanced security, and streamlined development processes.</p>
+                    <p>1: Seamless Integration: Blazor, a web framework from Microsoft for building interactive web UIs using C# instead of JavaScript, integrates seamlessly with Azure services. This integration enables developers to leverage the full range of Azure capabilities, such as Azure Functions, Cosmos DB, and Azure SQL, enhancing the functionality and scalability of web applications.</p>
+                    <p>2: Server-Side Processing with Azure: Blazor can run on the server-side with Blazor Server. Azure provides a robust and scalable environment for hosting Blazor Server applications, ensuring high performance and reliability.We can integrate your design into the application code base, to deliver a user interface (UI) and user experience (UX) that compliments your brand, providing delight to your users.</p>
+                    <p>3: Client-Side WebAssembly with Azure Static Web Apps: For Blazor WebAssembly applications, Azure Static Web Apps is a perfect hosting solution. It allows for client-side Blazor applications to be served efficiently, along with other static assets, while also providing features like serverless APIs, automated CI/CD, and global distribution.</p>
+                    <p>4: Security and Identity Services: Azure Active Directory and Azure AD B2C can be easily integrated with Blazor applications for authentication and authorization, providing secure access control.</p>
+                    <p>5: Development and Deployment Efficiency: Azure DevOps services can be used to automate the build, test, and deployment processes of Blazor applications. This integration streamlines the development lifecycle, making it more efficient and error-resistant.</p>
+                    <p>6: Scalability and Performance: Azure provides the ability to scale applications as needed. Blazor applications, especially when combined with Azure's cloud capabilities, can handle increased loads and traffic efficiently, ensuring smooth performance.</p>
+                    <p>7: Comprehensive Ecosystem: The combination benefits from the comprehensive ecosystem of tools, libraries, and resources available from both Blazor and Azure. This ecosystem simplifies the development process and provides extensive support for various application requirements.</p>
+                </div>
+
+                <div class="accordion-title">
+                    <a href="" class="">What does your typical client look like?</a>
+                </div>
+                <div class="accordion-content" style="display: none;">
+                    <p>We work across the board, from large organisations, medium sized businesses and startups but <strong>the majority of our work is with SMEs.</strong></p>
+                    <p>What all our clients have in common is an ambitious goal to deliver a well-architected, secure, robust and performant solution that users and machines love using to fulfil business requirements.</p>
+                </div>
+
+                <div class="accordion-title">
+                    <a href="" class="">Where do your technical strengths lie?</a>
+                </div>
+                <div class="accordion-content" style="display: none;">
+                    <p>We are fullstack. Most of the team come from an enterprise software development and architecture background. Although we have experience with almost every technology and programming language known to man, we specialise in Microsoft Azure and Blazor.</p>
+
+                    <ul>
+                        <li><strong>Microsoft Cloud.</strong> Although we fully support AWS and Google Cloud, we are certified Azure Solutions Architects and Developers.</li>
+                        <li><strong>.NET Blazor.</strong> Real world experience having delivered commercial applications using Blazor Server, Blazor WebAssembly and .NET MAUI Blazor Hybrid. We know and love Blazor.</li>
+                        <li><strong>Azure DevOps Services.</strong></li>
+                        <li><strong>Cross-Platform Mobile Development.</strong> .NET MAUI Blazor Hybrid application targeting iOS, Android and Windows.</li>
+                        <li><strong>Web Application Development.</strong> DotNet applications and Services that provide the robust and responsive business solutions you require.</li>
+                        <li><strong>ASP.NET Core WebAPIs.</strong> APIs to support your business needs.</li>
+                        <li><strong>Windows Desktop Development.</strong> UWP, WPF and Windows Forms desktop application that your business relies on.</li>
+                        <li><strong>.NET Core.</strong> DotNet Core Framework that we leverage for all types of workloads to provide you with a consistent, clean code architecture.</li>
+                        <li><strong>.NET Aspire.</strong> Simplifying Cloud-Native is often a quick route to market. We have the know-how to utilise out of the box Azure Solutions and also roll our own when more complexity is required.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- End Accordion -->
+    </div>
+
+</section>
+
+<section class="ptb-45 bg-midnight dark-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 text-left">
+                <h2 class="action-box-title mt-10">Assemblysoft are Your Safe Pair of Hands</h2>
+
+                <div>
+                    <a target="_blank" href="https://g.page/assemblysoft">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span style="color:green">16 <strong>Google</strong> Reviews</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-sm-6 text-center">
+
+
+                <div class="col-sm-4">
+
+                    <a asp-controller="Technologies" asp-action="azure" title="Azure Software Development Services">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/services/azure.svg" style="width:100px;" />
+                    </a>
+
+                    <h4 class="action-box-title mt-10">Azure</h4>
+                </div>
+
+                <div class="col-sm-4">
+                    <a asp-controller="Technologies" asp-action="ado" title="Azure DevOps Software Development Services">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/services/azure-devops.svg" style="width:100px;" />
+                    </a>
+
+                    <h4 class="action-box-title mt-10">Azure DevOps</h4>
+                </div>
+
+
+                <div class="col-sm-4">
+
+                    <a asp-controller="Technologies" asp-action="blazorunited" title="Blazor Software Development Services">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/services/blazor.svg" style="width:100px;" />
+                    </a>
+
+                    <h4 class="action-box-title mt-10">Blazor</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="footer" class="footer">
+    <div class="container text-center">
+        <ul class="social mb-60 wow fadeInUp" data-wow-duration="1.5s">
+
+            <li>
+                <a target="_blank" href="https://g.page/assemblysoft"><i class="fa fa-google-plus"></i><strong>Google</strong></a>
+            </li>
+
+            <li>
+                <a target="_blank" href="https://www.linkedin.com/company/Assemblysoft/"><i class="fa fa-linkedin"></i><strong>LinkedIn</strong></a>
+            </li>
+
+
+            <li>
+                <a asp-controller="businessservices" asp-action="index"><i class="fas fa-battery-full fa-lg"></i>&nbsp;<strong>Biz</strong></a>
+            </li>
+
+            <li>
+                <a asp-controller="blog" asp-action="index"><i class="fa fa-rss"></i>&nbsp;<strong>Blog</strong></a>
+            </li>
+
+
+            <li>
+                <a asp-controller="careers" asp-action="index"><i class="far fa-building fa-sm"></i>&nbsp;<strong>Careers</strong></a>
+            </li>
+
+            <li>
+                <a target="_blank" href="https://github.com/assemblysoft"><i class="fa fa-github fa-lg"></i>&nbsp;<strong>GitHub</strong></a>
+            </li>
+
+            <li>
+                <a target="_blank" href="https://www.nuget.org/profiles/AssemblySoft"><i class="fas fa-cube"></i>&nbsp;<strong>NuGet</strong></a>
+            </li>
+
+            <li>
+                <a asp-controller="community" asp-action="index"><i class="fas fa-users fa-lg"></i>&nbsp;<strong>Community</strong></a>
+            </li>
+
+        </ul>
+
+        <div class="alt-icon-top" style="margin-top:10px;">
+            <a class="external" asp-controller="home" asp-action="index">
+                <img class="lazyload client-logo" data-src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/partners/assemlysoft-ms-partner-logo2.png" />
+            </a>
+        </div>
+
+        <p class="copyright">
+            &copy; @DateTime.Now.Year.ToString(CultureInfo.InvariantCulture) Assemblysoft Limited. All rights reserved.
+
+            @*| <a title="Terms" asp-controller="home" asp-action="terms">Terms and Conditions</a>*@
+        </p>
+
+        <p class="copyright">
+            D-U-N-S® 216313949
+        </p>
+
+
+        <div>
+            <a href="mailto:hello@assemblysoft.com">
+                <div class="contact-info">
+                    <p class="lead"><i class="far fa-envelope"></i>&nbsp;hello@assemblysoft.com</p>
+                </div>
+            </a>
+        </div>
+        <p>Registered in England No. 07098083</p>
+        @* <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=QCLPvRI9yQhZvk3QwMjFy47ByMNAjbllsuZVpVFceqkMbVonTr59aJbmKs4p"></script></span> *@
+        @*<p>D-U-N-S No. 21-631-3949. Registered Office Address: 2 Woodland Walk, Bournemouth, BH5 1LU</p>*@
+
+    </div>
+
+
+</footer>
+<!-- End Footer Section -->
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Console.WriteLine("Component rendered completely");
+                        
+            //await JSRuntime.InvokeVoidAsync("InitHubspot", "init hubspot");
+            await JSRuntime.InvokeVoidAsync("InitHubspotDynamically", "init hubspot");
+
+        }
+    }
+                    }
