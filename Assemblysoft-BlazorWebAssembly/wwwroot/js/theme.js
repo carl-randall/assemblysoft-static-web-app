@@ -8,6 +8,34 @@ window.alerts = {
     }
 };
 
+function InitHubspotDynamically(value) {
+
+    const script = document.createElement("script");
+    script.setAttribute("type", "text/javascript");
+    script.src = "https://js.hsforms.net/forms/embed/v2.js";
+    
+    script.addEventListener("load", () => {
+        hbspt.forms.create({
+            region: "eu1",
+            portalId: "143286572",
+            formId: "fd02aa9b-1fd6-4c70-8c01-761b260af664"
+        });
+    });
+
+    const elem = document.getElementById("ctx");
+    //elem.append(script);
+    document.head.append(script);
+};
+
+
+function InitHubspot(value) {
+    hbspt.forms.create({
+        region: "eu1",
+        portalId: "143286572",
+        formId: "fd02aa9b-1fd6-4c70-8c01-761b260af664"
+    });
+};
+
 function InitTextRotation(value) {
 
     $(document).ready(function () {
@@ -27,7 +55,7 @@ function remove_loader(value) {
     $('#preloader').fadeOut('slow', function () {
         //$(this).remove();
         $(this).hide();
-    });    
+    });
 };
 
 
