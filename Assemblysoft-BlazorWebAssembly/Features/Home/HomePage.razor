@@ -12,41 +12,7 @@
     <meta name="twitter:description" content="@description">
 
 </HeadContent>
- 
-@code
-{
-    private string description = "Specialist .NET Development company. Experienced in Blazor, ASP.NET, ASP.NET Blazor, Azure DevOps and Microsoft Azure. Microsoft Partner. C# Cloud developers. Turning ideas into software. Based in Bournemouth Dorset.";
-    private string title = "Software Development Company | Assemblysoft";
 
-    protected override void OnInitialized()
-    {
-        Console.WriteLine("Component initialized");
-        //Task.Delay(4000);
-    }
-
-    protected override async Task OnInitializedAsync()
-    {
-        //await Task.Delay(4000);
-        Console.WriteLine("Component async initialized");
-        
-    }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if(firstRender)
-        {
-            Console.WriteLine("Component rendered completely");
-
-            await JSRuntime.InvokeVoidAsync("InitPage", "component rendered!");
-
-            //await Task.Delay(4000);
-            await JSRuntime.InvokeVoidAsync("remove_loader", "remove spinner");
-
-            await JSRuntime.InvokeVoidAsync("InitTextRotation", "initiate text rotation");
-            
-        }
-    }
-}
  
 <Header></Header>
 <section id="intro" class="intro black-bg hero">
@@ -137,11 +103,10 @@
 
 <style>
     .skillbar-bar-child {
-        background:red;
+        background: deepskyblue;
     }
 </style>
 
-@* <section id="expertise" class="section-padding pos-section white-bg bg-image overlay-light" data-stellar-background-ratio="0.4" data-background-img="img/bg/tech2.webp" style="background-image: url(&quot;img/bg/tech1.png&quot;); background-position: 50% -261.15px;"> *@
 <section id="expertise" class="section-padding pos-section white-bg">
     <!-- page triangle shape -->
     <div class="page-triangle white-bg"></div>
@@ -762,3 +727,42 @@
         </div>
     </div>
 </section>
+
+<Footer/>
+
+@code
+{
+    private string description = "Specialist .NET Development company. Experienced in Blazor, ASP.NET, ASP.NET Blazor, Azure DevOps and Microsoft Azure. Microsoft Partner. C# Cloud developers. Turning ideas into software. Based in Bournemouth Dorset.";
+    private string title = "Software Development Company | Assemblysoft";
+
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("Component initialized");
+        //Task.Delay(4000);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        //await Task.Delay(4000);
+        Console.WriteLine("Component async initialized");
+
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Console.WriteLine("Component rendered completely");
+
+            await JSRuntime.InvokeVoidAsync("InitPage", "component rendered!");
+
+            //await Task.Delay(4000);
+            await JSRuntime.InvokeVoidAsync("remove_loader", "remove spinner");
+
+            await JSRuntime.InvokeVoidAsync("InitTextRotation", "initiate text rotation");
+
+            //await JSRuntime.InvokeVoidAsync("InitHubspot", "init hubspot");
+
+        }
+    }
+}
