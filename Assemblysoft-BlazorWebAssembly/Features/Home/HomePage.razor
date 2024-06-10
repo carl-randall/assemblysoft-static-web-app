@@ -1,14 +1,23 @@
 ﻿@page "/"
 @inject IJSRuntime JSRuntime
 
-<PageTitle>Software Development Company | Assemblysoft</PageTitle>
+<PageTitle>@title</PageTitle>
 
 <HeadContent>
-    <meta name="description" content="Specialist .NET Development company. Experienced in Blazor, ASP.NET, ASP.NET Blazor, Azure DevOps and Microsoft Azure. Microsoft Partner. C# Cloud developers. Turning ideas into software. Based in Bournemouth Dorset.">    
+    <meta name="description" content="@description">    
+
+    <meta property="og:title" content="@title">
+    <meta property="og:description" content="@description">
+    <meta name="twitter:title" content="@title">
+    <meta name="twitter:description" content="@description">
+
 </HeadContent>
  
 @code
 {
+    private string description = "Specialist .NET Development company. Experienced in Blazor, ASP.NET, ASP.NET Blazor, Azure DevOps and Microsoft Azure. Microsoft Partner. C# Cloud developers. Turning ideas into software. Based in Bournemouth Dorset.";
+    private string title = "Software Development Company | Assemblysoft";
+
     protected override void OnInitialized()
     {
         Console.WriteLine("Component initialized");

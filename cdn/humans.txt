@@ -1,0 +1,35 @@
+﻿# humanstxt.org/ 
+# The humans responsible & technology colophon 
+
+# TEAM 
+	
+	Assemblysoft Ltd Director : Carl Randall	
+	Assemblysoft UX and Testing : Doerte Hindsh
+	Assemblysoft Sales : George Randall
+	Assemblysoft SEO & Marketing : Ashleigh Hindsh
+	Website : http://www.assemblysoft.com
+	Twitter : @Carl_Randall	
+
+# THANKS 
+	
+	Azure DevOps : DevOps lifecycle done right
+	Microsoft Azure : The cloud has never been so good
+	Google : Because we all work for you in the end
+	Github : Because its Great
+	Stack Overflow : For Having All the Answers
+	.NET Foundation : For your support
+
+# TECHNOLOGY COLOPHON 
+
+	ASP.NET,
+	BLAZOR,
+	Windows Development,
+	Azure DevOps,
+	HTML5,
+	CSS3, 
+	jQuery,
+	JQuery UI,
+	Angular 7,
+	Bootstrap,
+	Font-Awesome
+	Microsoft Azure
