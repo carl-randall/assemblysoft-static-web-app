@@ -1,0 +1,36 @@
+﻿@page "/control-head-content"
+@inject IJSRuntime JSRuntime
+<PageTitle>@title</PageTitle>
+
+<h1>Control Content Example</h1>
+
+<p>
+    Title: @title
+</p>
+
+<p>
+    Description: @description
+</p>
+
+<HeadContent>
+    <meta name="description" content="@description">
+</HeadContent>
+
+@code {
+    private string description = "This description is set by the component.";
+    private string title = "Control <head> Content";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Console.WriteLine("Component rendered completely");
+
+            await JSRuntime.InvokeVoidAsync("InitPage", "component rendered!");
+
+            //await Task.Delay(4000);
+            await JSRuntime.InvokeVoidAsync("remove_loader", "remove spinner");
+
+        }
+    }
+}
