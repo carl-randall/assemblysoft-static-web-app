@@ -58,7 +58,7 @@
                 <h3 class="action-box-title mt-10">Start a meaningful conversation with us today.</h3>
             </div>
             <div id="ctx" class="col-sm-8" style="background:#fff;box-shadow: 0 4px 8px 0 rgba(53,105,128,.3),0 6px 20px 0 rgba(165,200,213,.41);padding:40px;">
-                
+
                 @* <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script> *@
                 <script>
                     hbspt.forms.create({
@@ -291,7 +291,6 @@
 
 </footer>
 <!-- End Footer Section -->
-
 @code
 {
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -299,10 +298,6 @@
         if (firstRender)
         {
             Console.WriteLine("Component rendered completely");
-                        
-            //await JSRuntime.InvokeVoidAsync("InitHubspot", "init hubspot");
-            await JSRuntime.InvokeVoidAsync("InitHubspotDynamically", "init hubspot");
-
         }
     }
-                    }
+}
