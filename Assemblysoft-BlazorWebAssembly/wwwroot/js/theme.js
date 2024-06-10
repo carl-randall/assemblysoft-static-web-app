@@ -8,6 +8,16 @@ window.alerts = {
     }
 };
 
+function InitTextRotation(value) {
+
+    $(document).ready(function () {
+        $(".text-rotate").textrotator({
+            animation: "dissolve",
+            separator: ",",
+            speed: 4000
+        });
+    });
+};
 
 function remove_loader(value) {
 

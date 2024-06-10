@@ -41,6 +41,8 @@
 
             //await Task.Delay(4000);
             await JSRuntime.InvokeVoidAsync("remove_loader", "remove spinner");
+
+            await JSRuntime.InvokeVoidAsync("InitTextRotation", "initiate text rotation");
             
         }
     }
@@ -385,7 +387,7 @@
     </div>
 </section>
 
-<section id="counter" class="section-padding bg-image dark-bg pos-section overlay-dark" data-stellar-background-ratio="0.4" data-background-img="img/bg/tech2.webp" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/bg/tech2.webp&quot;); background-position: 50% -337.075px;">
+<section id="counter" class="section-padding bg-image dark-bg pos-section overlay-dark" data-stellar-background-ratio="0.4" data-background-img="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/bg/tech2.webp" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/bg/tech2.webp&quot;); background-position: 50% -337.075px;">
     <!-- page triangle shape -->
     <div class="page-triangle white-bg"></div>
     <!-- End page triangle shape -->
@@ -695,7 +697,7 @@
 </section>
 
 
-<section id="statement section-padding" class="bg-grad-purple section-padding bg-image pos-section wow fadeIn" data-wow-duration="0.3s" data-wow-delay="0.2s">
+<section id="statement section-padding" class="bg-grad-purple section-padding bg-image pos-section">
 
     <div class="page-triangle white-bg"></div>
     <div class="container text-center ptb-45">
@@ -728,7 +730,7 @@
 
             <div class="col-sm-4">
 
-                <img data-src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/services/dotnet-bot-maui-cross-platform-development.png" style="max-height:300px;max-width:300px;" alt="Assemblysoft host Blazor and .Net User group presentations as members of the dotnet foundation." />
+                <img src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/services/dotnet-bot-maui-cross-platform-development.png" data-src="https://cdn.jsdelivr.net/gh/carl-randall/assemblysoft-static-web-app@feature/css-template/cdn/img/services/dotnet-bot-maui-cross-platform-development.png" style="max-height:300px;max-width:300px;" alt="Assemblysoft host Blazor and .Net User group presentations as members of the dotnet foundation." />
                 <p class="lead-lg mb-10 white"><a class="light" asp-controller="technologies" asp-action="blazorunited">.NET Blazor experts</a></p>
                 <p class="lead-lg mb-10 white"><a class="light" asp-controller="technologies" asp-action="ado">Azure DevOps experts</a></p>
                 <p class="lead-lg mb-10 white"><a class="light" asp-controller="technologies" asp-action="azure">Microsoft Azure development experts</a></p>
